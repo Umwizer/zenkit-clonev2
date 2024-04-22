@@ -8,7 +8,7 @@
  * const duration = durationCalculator('2022-01-01T10:30:00.000Z', '2022-01-01T11:30:00.000Z');
  * console.log(duration); // Output: { durationPeriod: 1, durationType: 'Hours' }
  */
-export const durationCalculator = (startDate, endDate) => {
+const durationCalculator = (startDate, endDate) => {
     const duration = {
         durationPeriod: 0,
         durationType: ''
@@ -34,3 +34,4 @@ export const durationCalculator = (startDate, endDate) => {
   
     return duration;
   };
+  export default durationCalculator

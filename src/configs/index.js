@@ -2,9 +2,9 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const Configs = {
-    MONGODB_CONNECTION_STRING: process.env.MONGODB_CONNECTION_STRING,
+    MONGODB_CONNECTION_STRING: process.env.MONGODB_CONNECTION_STRING || 'mongodb+srv://ruthumwizerwa:0vbltZDjj2qXBkyv@cluster0.w5h53ou.mongodb.net/',
     CLIENT_APP: process.env.CLIENT_APP || 'http://localhost:5173',
-    PORT: process.env.PORT,
+    PORT: process.env.PORT || 3000,
     JWT_SECRET_KEY: process.env.JWT_SECRET_KEY,
     JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN,
     JWT_REFRESH_EXPIRES_IN: process.env.JWT_REFRESH_EXPIRES_IN,
@@ -12,3 +12,4 @@ const Configs = {
 }
 
 export default Configs;
+//0vbltZDjj2qXBkyv

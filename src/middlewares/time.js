@@ -1,9 +1,10 @@
-import { durationCalculator } from '../utils/helperFunctions.js';
+import  durationCalculator  from '../utils/helperFunctions.js';
 
 export const setTime = async (req, res, next) => {
     var startTime = "";
     var endTime = "";
-    if (!req.body.dueData) {
+  
+    if (!req.body.dueDate) {
         next();
     } else {
         if (req.body.dueDate.startDate) {
@@ -14,7 +15,7 @@ export const setTime = async (req, res, next) => {
         }
         req.body.dueDate.startTime = startTime;
         req.body.dueDate.endTime = endTime;
-    
+        
         const duration = durationCalculator(req.body.dueDate.startDate, req.body.dueDate.endDate);
         req.body.dueDate.duration = duration.durationPeriod;
         req.body.dueDate.durationType = duration.durationType;

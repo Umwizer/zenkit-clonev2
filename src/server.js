@@ -22,9 +22,8 @@ app.use(express.json());
 app.use('/api-doc', swaggerUi.serve);
 app.use('/api-doc', swaggerUi.setup(documentation));
 app.use('/api/v1', allRoutes);
-
 // Database connectivity
-mongoose.connect(configurations.MONGODB_CONNECTION_STRING.toString())
+mongoose.connect(configurations.MONGODB_CONNECTION_STRING)
 .then(() => console.log("Connected to MongoDB"))
 .catch(err => console.log(err));
 
